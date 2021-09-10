@@ -4,8 +4,14 @@ public class Captain extends Pirate {
     private Ship ship;
     private int rumOwned;
 
-    public Captain(String name, int strength, int drunkLevel, boolean canFight, Weapon weapon, Ship ship, int rumOwned) {
-        super(name, strength, drunkLevel, canFight, weapon);
+    public Captain(int id, String name, Weapon weapon, Ship ship, int rumOwned) {
+        super(id, name, weapon);
+        this.ship = ship;
+        this.rumOwned = rumOwned;
+    }
+
+    public Captain(int id, String name, int strength, int drunkLevel, boolean canFight, Weapon weapon, Ship ship, int rumOwned) {
+        super(id, name, strength, drunkLevel, canFight, weapon);
         this.ship = ship;
         this.rumOwned = rumOwned;
     }

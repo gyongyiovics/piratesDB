@@ -5,12 +5,21 @@ import java.util.List;
 import java.util.Map;
 
 public class Ship {
+    private int id;
     private String name;
     private int attackPower;
     private int state;
+    //TODO: final fields and sql?
     private final String weapon = "CANNON";
     private final int cannonDamage = 25;
     private Map<String, List<Pirate>> shipWithCrew;
+
+    public Ship(int id, String name, int attackPower, int state) {
+        this.id = id;
+        this.name = name;
+        this.attackPower = attackPower;
+        this.state = state;
+    }
 
     public Ship(String name, int attackPower, int state, Map<String, List<Pirate>> shipWithCrew) {
         this.name = name;
@@ -23,6 +32,10 @@ public class Ship {
         enemy.setAttackPower(enemy.getAttackPower() - this.getCannonDamage());
         return enemy.getAttackPower();
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getName() {
         return name;

@@ -1,13 +1,21 @@
 package models;
 
 public class Pirate {
+    protected int id;
     protected String name;
     protected int strength;
     protected int drunkLevel;
     protected boolean canFight;
     protected Weapon weapon;
 
-    public Pirate(String name, int strength, int drunkLevel, boolean canFight, Weapon weapon) {
+    public Pirate(int id, String name, Weapon weapon) {
+        this.id = id;
+        this.name = name;
+        this.weapon = weapon;
+    }
+
+    public Pirate(int id, String name, int strength, int drunkLevel, boolean canFight, Weapon weapon) {
+        this.id = id;
         this.name = name;
         this.strength = strength;
         this.drunkLevel = drunkLevel;
@@ -19,6 +27,10 @@ public class Pirate {
         enemy.setStrength(enemy.getStrength() - this.weapon.getWEAPON_DAMAGE());
         return enemy.getStrength();
     }
+
+    public int getId() { return id; }
+
+    public void setId(int id) { this.id = id; }
 
     public String getName() {
         return name;
