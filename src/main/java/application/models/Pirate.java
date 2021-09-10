@@ -8,6 +8,9 @@ public class Pirate {
     protected boolean canFight;
     protected Weapon weapon;
 
+    public Pirate(String name) {
+        this.name = name;
+    }
     public Pirate(int id, String name, Weapon weapon) {
         this.id = id;
         this.name = name;
