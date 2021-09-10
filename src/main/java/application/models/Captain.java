@@ -1,4 +1,4 @@
-package models;
+package application.models;
 
 public class Captain extends Pirate {
     private Ship ship;

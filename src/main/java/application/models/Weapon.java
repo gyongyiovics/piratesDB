@@ -1,4 +1,4 @@
-package models;
+package application.models;
 
 public enum Weapon {
     MUSKET(50),

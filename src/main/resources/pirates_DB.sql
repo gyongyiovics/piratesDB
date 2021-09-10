@@ -15,7 +15,7 @@ CREATE TABLE pirate(
 CREATE TABLE captain(
 	id INT UNSIGNED AUTO_INCREMENT,
     captain_name VARCHAR(100),
-    captains_weapon VARCHAR(100),
+    captain_weapon VARCHAR(100),
     ship VARCHAR(100),
     rum_owned INT,
     PRIMARY KEY(id),

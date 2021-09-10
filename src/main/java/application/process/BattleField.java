@@ -1,4 +1,4 @@
-package process;
+package application.process;
 
 public class BattleField {
 }
