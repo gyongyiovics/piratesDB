@@ -55,6 +55,26 @@ public class QueryBuilder {
         return this;
     }
 
+    public QueryBuilder update(Table table, List<Column> columns, List<String> values) {
+        query.append("UPDATE ").append(EnumHelper.getDBName(table));
+        query.append(" SET ");
+
+        if(columns.size()> 0) {
+            addColumnsAndValues(columns, values);
+        }
+        return this;
+    }
+
+    private void addColumnsAndValues(List<Column> columns, List<String> values) {
+        for (int i = 0; i < columns.size(); i++) {
+            query.append(EnumHelper.getDBName(columns.get(i))).append(" = ")
+                    .append(values.get(i))
+                    .append(", ");
+            //append the parameter values here to each column!
+        }
+        query.setLength(query.length() - 2);
+    }
+
     private void addColumns(Column... columns) {
         for (Column column: columns) {
             query.append(EnumHelper.getDBName(column)).append(", ");
