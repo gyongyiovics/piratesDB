@@ -17,7 +17,7 @@ public class DBEngine {
     //make connection
     public Connection connect() {
         String jdbc = "jdbc:mysql://localhost:3306/";
-        String dbName = "pirateDB";
+        String dbName = "piratesDB";
         String rest = "?useUnicode=yes&characterEncoding=UTF-8";
         String url = jdbc + dbName + rest;
         Properties properties = new Properties();
